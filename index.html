@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Izzkhan</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins">
+    </head>
+    <body>
+        <!-- -----------Header----------- -->
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <img src="Images/izz white.png">
+                        <img src="Images/izz mix.png" class="logo-hover">
+                        <img src="Images/izz.png" class="logo-active">
+                    </div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Freelance Web Developer</p>
+                    <h1>Hi, I'm Ariff <span>Izzkhan</span></h1>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------About---------------- -->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/Gambar Ariff-C.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle"><span>About</span> Me</h1>
+                        <h4>Computer Science & Information Systems Engineering Student - IT Enthusiast</h4><br>
+                        <p>
+                            A passionate programmer based in Kuala Lumpur, Malaysia who values the 
+                            significance of knowledge, communication and self-improvement. 
+                            Currently focusing on learning the art of freelance software development.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                            <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                            <p class="tab-links" onclick="openTab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>
+                                    <span>HTML</span><br>
+                                    Lorem ipsum.
+                                </li>
+                                <li>
+                                    <span>CSS</span><br>
+                                    Lorem ipsum.
+                                </li>
+                                <li>
+                                    <span>Javascript</span><br>
+                                    Lorem ipsum.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li>
+                                    <span>Sept 2023 - Current</span><br>
+                                    Software QA Tester Intern at Cloud Connect Sdn Bhd
+                                </li>
+                                <li>
+                                    <span>Sept 2021 - Feb 2022</span><br>
+                                    Software Developer Intern at Universiti Teknologi MARA Puncak Alam
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li>
+                                    <span>2022 - Current</span><br>
+                                    Bachelor's Degree in Information Systems Engineering from Universiti Teknologi MARA
+                                </li>
+                                <li>
+                                    <span>2019 - 2022</span><br>
+                                    Diploma in Computer Science from Universiti Teknologi MARA
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -----------------Services---------------- -->
+        <div id="services">
+            <div class="container">
+                <h1 class="subtitle">My <span>Services</span></h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Web Development</h2>
+                        <p>Building various websites for your needs using HTML, CSS and Javascript.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>Web Development</h2>
+                        <p>Building various websites for your needs using HTML, CSS and Javascript.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>Web Development</h2>
+                        <p>Building various websites for your needs using HTML, CSS and Javascript.</p>
+                        <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function openTab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
