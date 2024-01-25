@@ -284,7 +284,7 @@ width: 100%;
     width: fit-content;
     border: 1px solid #0E0AFF;
     padding: 14px 50px;
-    border-radius: 20px;
+    border-radius: 15px;
     text-decoration: none;
     color: #fff;
     transition: background-color 0.5s;
@@ -298,4 +298,102 @@ width: 100%;
 .contact-left .number{
     display: flex;
     align-items: center;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+.contact-left p{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+.contact-left p i{
+    color: #0E0AFF;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 20px;
+}
+.social-icons a{
+    color: #fff;
+    font-size: 30px;
+    margin-right: 15px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s;
+}
+.social-icons a:hover{
+    color: #0E0AFF;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: #0E0AFF;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #080808;
+    font-weight: 200;
+    margin-top: 20px;
+}
+nav .fa-solid {
+    display: none;
+}
+
+/* ---------------CSS For Small Screen------------------ */
+
+@media only screen and (max-device-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    /* .logo{
+        width: 33px;
+        height: 33px;
+    } */
+    #body{
+        background-image: url('Images/Background-80.jpg');
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #0E0AFF;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
 }
