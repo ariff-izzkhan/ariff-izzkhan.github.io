@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-image: url('Images/Background-80.jpg');
     background-size: cover;
@@ -365,21 +368,43 @@ form .btn2{
 nav .fa-solid {
     display: none;
 }
+#msg{
+    color: yellowgreen;
+    display: block;
+    margin-top: -30px;
+}
+#scrollToTopBtn{
+    width: 50px;
+    height: 50px;
+    position: fixed; /* Fixed position to keep it visible while scrolling */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Ensure it appears above other content */
+    font-size: 18px;
+    background-color: #0E0AFF;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 15px;
+    opacity: 0; /* Start with opacity set to 0 */
+    transition: opacity 0.5s ease; /* Opacity transition with duration and easing */
+}
+#scrollToTopBtn.show{
+    opacity: 0.7; /* When the button is shown, change opacity to 1 */
+}
+  
 
 /* ---------------CSS For Small Screen------------------ */
 
 @media only screen and (max-device-width: 600px){
     .header-text{
-        margin-top: 100%;
+        margin-top: 70%;
         font-size: 16px;
     }
     .header-text h1{
         font-size: 30px;
     }
-    /* .logo{
-        width: 33px;
-        height: 33px;
-    } */
     #body{
         background-image: url('Images/Background-80.jpg');
     }
@@ -407,5 +432,27 @@ nav .fa-solid {
         top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
     }
 }
