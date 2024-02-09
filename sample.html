@@ -38,5 +38,32 @@
                 </div>
             </div>
         </div>
+        <div class="copyright">
+            <p>Copyright © IzzkhanDev. Made by IzzkhanDev. </p>
+        </div>
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+        <script>
+            var sidemenu = document.getElementById("sidemenu")
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+        <script>
+            window.onscroll = function() {scrollFunction()};
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("scrollToTopBtn").classList.add("show"); // Add 'show' class
+                } else {
+                    document.getElementById("scrollToTopBtn").classList.remove("show"); // Remove 'show' class
+                }
+            }
+            function scrollToTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
     </body>
 </html>
