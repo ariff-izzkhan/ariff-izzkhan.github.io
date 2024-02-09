@@ -398,10 +398,14 @@ nav .fa-solid {
 @media only screen and (max-device-width: 600px){
     .header-text{
         margin-top: 70%;
-        font-size: 16px;
+        font-size: 18px;
     }
     .header-text h1{
         font-size: 30px;
+    }
+    .header-text p span{
+        font-size: 20px;
+        font-weight: bold;
     }
     #body{
         background-image: url('Images/Background-80.jpg');
