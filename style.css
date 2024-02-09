@@ -438,6 +438,9 @@ nav .fa-solid {
     .subtitle{
         font-size: 40px;
     }
+    #about{
+        margin: 0 20px;
+    }
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
