@@ -113,7 +113,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
     font-size: 60px;
 }
-.header-text h1 span{
+.header-text h1 span, .header-text p span{
     color: #0E0AFF;
 }
 
@@ -213,22 +213,21 @@ width: 100%;
 .services-list div i{
     font-size: 50px;
     margin-bottom: 30px;
+    color: #0E0AFF;
 }
 .services-list div h2{
     font-size: 30px;
-    font-weight: 500;
     margin-bottom: 15px;
 }
-.services-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+.services-list div p{
+    font-size: 16px;
 }
 .services-list div:hover{
     background-color: rgba(14, 10, 255, 0.3);
     transform: translateY(-10px);
+}
+.services-list ul li{
+    margin-left: 15px;
 }
 
 /* -----------------Products----------------- */
