@@ -441,6 +441,9 @@ nav .fa-solid {
 /* ---------------CSS For Small Screen------------------ */
 
 @media only screen and (max-device-width: 600px){
+    #single .container .subtitle{
+        font-size: 32px;
+    }
     #header{
         height: 100%;
     }
