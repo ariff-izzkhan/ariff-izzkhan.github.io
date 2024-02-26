@@ -246,6 +246,9 @@ h6,
 
 
 /*** Product ***/
+#product .container{
+    padding-top: 20px;
+}
 .product-item {
     transition: .5s;
 }
@@ -331,6 +334,12 @@ h6,
 
 
 /*** Testimonial ***/
+#review{
+    padding-top: 20px;
+}
+#review .container{
+    padding-bottom: 20px;
+}
 .testimonial-carousel .owl-item .testimonial-item img {
     width: 60px;
     height: 60px;
