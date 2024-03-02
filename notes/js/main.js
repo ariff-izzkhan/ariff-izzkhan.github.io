@@ -16,7 +16,6 @@ $(document).ready(function(){
         scrollSpeed: 1200
     });
 
-     
     //animated header class
     $(window).scroll(function () {
         if ($(window).scrollTop() > 100) {
