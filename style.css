@@ -572,7 +572,7 @@ nav .fa-solid {
         font-weight: bold;
     }
     #body{
-        background-image: url('Images/Background-80.jpg');
+        background-image: url('Images/Background-80.webp');
     }
     nav .fa-solid {
         display: block;
@@ -661,5 +661,13 @@ nav .fa-solid {
     }
     .copyright{
         font-size: 14px;
+    }
+}
+@media only screen and (max-device-width: 400px){
+    #pricing .container .subtitle{
+        font-size: 34px;
+    }
+    .pricing-list div .list{
+        font-size: 16px;
     }
 }
