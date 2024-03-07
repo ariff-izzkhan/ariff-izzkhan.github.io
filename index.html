@@ -29,13 +29,18 @@
                         <img src="Images/izz mix.png" class="logo-hover">
                         <img src="Images/izz.png" class="logo-active">
                     </div>
+                    <div class="lang">
+                        <a href="#EN" data-reload onclick="reload('#EN')">ENG </a>
+                        |
+                        <a href="#BM" data-reload onclick="reload('#BM')"> BM</a>
+                    </div>
                     <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#header" id="homeL">Home</a></li>
+                        <li><a href="#about" id="aboutL">About</a></li>
+                        <li><a href="#services" id="servicesL">Services</a></li>
+                        <li><a href="#products" id="productsL">Products</a></li>
+                        <li><a href="#pricing" id="pricingL">Pricing</a></li>
+                        <li><a href="#contact" id="contactL">Contact</a></li>
                         <i class="fa-solid fa-x" onclick="closemenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -280,6 +285,7 @@
         </div>
         <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
         <!-- ------------Script------------- -->
+        <!-- ------------Tab for About------------- -->
         <script>
             var tablinks = document.getElementsByClassName("tab-links");
             var tabcontents = document.getElementsByClassName("tab-contents");
@@ -295,6 +301,7 @@
                 document.getElementById(tabname).classList.add("active-tab");
             }
         </script>
+        <!-- ------------Sidemenu for Mobile------------- -->
         <script>
             var sidemenu = document.getElementById("sidemenu")
             function openmenu(){
@@ -304,6 +311,7 @@
                 sidemenu.style.right = "-200px";
             }
         </script>
+        <!-- ------------Contact Form to GSheet------------- -->
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbxBPn4DeDVRY90mV92tm_hmHjaLCQvzXiCBuaHzaVL0on2yWUoWTNQsCuOtPLoyjOC2AQ/exec'
             const form = document.forms['submit-to-google-sheet']
@@ -323,6 +331,7 @@
                 .catch(error => console.error('Error!', error.message))
             })
         </script>
+        <!-- ------------Button to Top------------- -->
         <script>
             window.onscroll = function() {scrollFunction()};
             function scrollFunction() {
@@ -335,6 +344,51 @@
             function scrollToTop() {
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <!-- ------------Language Switcher------------- -->
+        <script>
+            var language = {
+                en: {
+                    homeL: "Home",
+                    aboutL: "About",
+                    servicesL: "Services",
+                    productsL: "Products",
+                    pricingL: "Pricing",
+                    contactL: "Contact"
+                },
+                bm: {
+                    homeL: "Utama",
+                    aboutL: "Mengenai Kami",
+                    servicesL: "Perkhidmatan",
+                    productsL: "Produk",
+                    pricingL: "Harga",
+                    contactL: "Hubungi Kami"
+                }
+            };
+            
+            if(window.location.hash){
+                if(window.location.hash === "#EN"){
+                    document.getElementById("homeL").textContent = language.en.homeL;
+                    document.getElementById("aboutL").textContent = language.en.aboutL;
+                    document.getElementById("servicesL").textContent = language.en.servicesL;
+                    document.getElementById("productsL").textContent = language.en.productsL;
+                    document.getElementById("pricingL").textContent = language.en.pricingL;
+                    document.getElementById("contactL").textContent = language.en.contactL;
+                }
+                else if(window.location.hash === "#BM"){
+                    document.getElementById("homeL").textContent = language.bm.homeL;
+                    document.getElementById("aboutL").textContent = language.bm.aboutL;
+                    document.getElementById("servicesL").textContent = language.bm.servicesL;
+                    document.getElementById("productsL").textContent = language.bm.productsL;
+                    document.getElementById("pricingL").textContent = language.bm.pricingL;
+                    document.getElementById("contactL").textContent = language.bm.contactL;
+                }
+            }
+            
+            function reload(hash) {
+                window.location.href = window.location.href.split('#')[0] + hash;
+                location.reload();
             }
         </script>
     </body>

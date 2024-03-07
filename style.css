@@ -78,8 +78,18 @@ img.logo-active{
     transition: opacity 0.1s;
 }
 
-/* -----------Logo----------- */
-
+/* -----------Header----------- */
+.lang a{
+    font-size: 18px;
+    margin: 5px;
+    text-decoration: none;
+    color: inherit; /* Use the color inherited from the parent */
+    outline: none;
+    transition: color 0.5s;
+}
+.lang a:hover{
+    color: #0E0AFF; /* Change the color to blue when link is clicked */
+}
 nav ul li{
     display: inline-block;
     list-style: none;
