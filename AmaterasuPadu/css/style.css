@@ -642,6 +642,28 @@
 
 
 /*** Contact ***/
+.map{
+    width:600px;
+    height:450px;
+}
+@media only screen and (max-width: 320px){
+    .map{
+        width:290px;
+        height:300px;
+    }
+}
+@media only screen and (max-device-width: 375px) and (min-width: 321px){
+    .map{
+        width:330px;
+        height:380px;
+    }
+}
+@media only screen and (max-device-width: 425px) and (min-width:376px){
+    .map{
+        width:370px;
+        height:420px;
+    }
+}
 @media (min-width: 992px) {
     .container.contact {
         max-width: 100% !important;
