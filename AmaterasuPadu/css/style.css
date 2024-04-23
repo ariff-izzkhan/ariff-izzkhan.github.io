@@ -298,11 +298,32 @@
 
 /*** About ***/
 .about-logo{
-    min-height: 200px;
+    min-height: 400px;
 }
 .text-about{
     text-align: justify;
 }
+@media only screen and (max-width: 320px){
+    .about-logo{
+        min-height: 200px;
+    }
+}
+@media only screen and (max-device-width: 375px) and (min-width: 321px){
+    .about-logo{
+        min-height: 200px;
+    }
+}
+@media only screen and (max-device-width: 425px) and (min-width:376px){
+    .about-logo{
+        min-height: 250px;
+    }
+}
+@media only screen and (max-device-width: 768px) and (min-width: 426px){
+    .about-logo{
+        min-height: 430px;
+    }
+}
+
 @media (min-width: 992px) {
     .container.about {
         max-width: 100% !important;
@@ -642,28 +663,6 @@
 
 
 /*** Contact ***/
-.map{
-    width:600px;
-    height:450px;
-}
-@media only screen and (max-width: 320px){
-    .map{
-        width:290px;
-        height:300px;
-    }
-}
-@media only screen and (max-device-width: 375px) and (min-width: 321px){
-    .map{
-        width:330px;
-        height:380px;
-    }
-}
-@media only screen and (max-device-width: 425px) and (min-width:376px){
-    .map{
-        width:370px;
-        height:420px;
-    }
-}
 @media (min-width: 992px) {
     .container.contact {
         max-width: 100% !important;
