@@ -684,6 +684,34 @@
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
+.map{
+    width: 600px;
+    height: 450px;
+}
+@media only screen and (max-width: 320px){
+    .map{
+        width: 270px;
+        height: 320px;
+    }
+}
+@media only screen and (max-device-width: 375px) and (min-width: 321px){
+    .map{
+        width: 330px;
+        height: 350px;
+    }
+}
+@media only screen and (max-device-width: 425px) and (min-width:376px){
+    .map{
+        width: 380px;
+        height: 350px;
+    }
+}
+@media only screen and (max-device-width: 768px) and (min-width: 426px){
+    .map{
+        width: 700px;
+        height: 370px;
+    }
+}
 
 
 /*** Footer ***/
